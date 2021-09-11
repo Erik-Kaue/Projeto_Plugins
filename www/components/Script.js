@@ -40,11 +40,11 @@ window.onload = function(){
 
         document.querySelector("#resultado").textContent = result.text;
 
-        if(result.canceled){
-          navigator.vibrate(3000);
+        if(result.cancelled){       
           navigator.notification.alert("Leitura Cancelada");
         }else{
-          navigator.notification.alert("Leitura Bem Sucedida")
+          navigator.vibrate(1000);
+          navigator.notification.alert("Leitura Bem Sucedida");
         }
           //alert("We got a barcode\n" +
             //    "Result: " + result.text + "\n" +
